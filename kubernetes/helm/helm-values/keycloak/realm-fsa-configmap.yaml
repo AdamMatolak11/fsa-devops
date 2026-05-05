@@ -828,18 +828,22 @@ data:
             "id": "543411e2-c7cf-4f52-ae5d-ace60f9af61f",
             "clientId": "skill-market-client",
             "name": "Skill Market Client",
-            "rootUrl": "http://localhost:4200",
-            "adminUrl": "http://localhost:4200",
-            "baseUrl": "http://localhost:4200",
+            "rootUrl": "https://20-234-19-239.sslip.io",
+            "adminUrl": "https://20-234-19-239.sslip.io",
+            "baseUrl": "https://20-234-19-239.sslip.io",
             "surrogateAuthRequired": false,
             "enabled": true,
             "alwaysDisplayInConsole": false,
             "clientAuthenticatorType": "client-secret",
             "redirectUris": [
-              "http://localhost:4200/*"
+              "https://20-234-19-239.sslip.io/*",
+              "http://20.234.19.239/*",
+              "https://app.fullstackacademy.sk/*"
             ],
             "webOrigins": [
-              "http://localhost:4200"
+              "https://20-234-19-239.sslip.io",
+              "http://20.234.19.239",
+              "https://app.fullstackacademy.sk"
             ],
             "notBefore": 0,
             "bearerOnly": false,
@@ -852,7 +856,7 @@ data:
             "frontchannelLogout": false,
             "protocol": "openid-connect",
             "attributes": {
-              "post.logout.redirect.uris": "http://localhost:4200/*"
+              "post.logout.redirect.uris": "https://20-234-19-239.sslip.io/*##http://20.234.19.239/*##https://app.fullstackacademy.sk/*"
             },
             "authenticationFlowBindingOverrides": {},
             "fullScopeAllowed": true,
