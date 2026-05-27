@@ -42,6 +42,7 @@ data:
         "oauth2DeviceCodeLifespan": 600,
         "oauth2DevicePollingInterval": 5,
         "enabled": true,
+        "loginTheme": "skillmarket",
         "sslRequired": "external",
         "registrationAllowed": false,
         "registrationEmailAsUsername": false,

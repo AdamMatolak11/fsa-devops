@@ -67,6 +67,9 @@ extraVolumes: |
   - name: keycloak-realm-fsa
     configMap:
       name: keycloak-realm-fsa
+  - name: theme-volume
+    configMap:
+      name: keycloak-theme-jar
 
 extraVolumeMounts: |
   - name: keycloak-java-config
@@ -75,6 +78,9 @@ extraVolumeMounts: |
   - name: keycloak-realm-fsa
     mountPath: /opt/keycloak/data/import/realm-fsa.json
     subPath: realm-fsa.json
+  - name: theme-volume
+    mountPath: /opt/keycloak/providers/skillmarket-theme.jar
+    subPath: skillmarket-theme.jar
 
 ## Databáza — Azure PostgreSQL Flexible Server
 database:

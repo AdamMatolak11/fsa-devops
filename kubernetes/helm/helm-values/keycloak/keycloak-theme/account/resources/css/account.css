@@ -1,0 +1,470 @@
+/* SkillMarket Keycloak Account Theme Styles */
+
+:root {
+  /* Colors - Matching SkillMarket App */
+  --primary: #1E293B;
+  --secondary: #0EA5E9;
+  --success: #10B981;
+  --danger: #EF4444;
+  --warning: #F59E0B;
+  --light: #F8FAFC;
+  --dark: #0F172A;
+  
+  /* Neutral Colors */
+  --gray-100: #F1F5F9;
+  --gray-200: #E2E8F0;
+  --gray-300: #CBD5E1;
+  --gray-400: #94A3B8;
+  --gray-500: #64748B;
+  --gray-600: #475569;
+  --gray-700: #334155;
+  --gray-800: #1E293B;
+  --gray-900: #0F172A;
+
+  /* Border Radius */
+  --border-radius-sm: 0.375rem;
+  --border-radius-md: 0.5rem;
+  --border-radius-lg: 0.75rem;
+  --border-radius-xl: 1rem;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background-color: var(--light);
+  color: var(--dark);
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.navbar {
+  box-shadow: var(--shadow-sm);
+}
+
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+.navbar-dark {
+  background-color: var(--primary) !important;
+}
+
+/* Main Content */
+.kc-account-main {
+  flex: 1;
+  padding: 2rem 1rem;
+  background-color: var(--light);
+}
+
+.kc-account-wrapper {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Account Page */
+.kc-account-page {
+  width: 100%;
+}
+
+/* Sidebar Navigation */
+.kc-account-sidebar {
+  position: sticky;
+  top: 100px;
+}
+
+.kc-account-sidebar .list-group {
+  box-shadow: var(--shadow-md);
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+}
+
+.kc-account-sidebar .list-group-item {
+  border: none;
+  padding: 1rem;
+  font-weight: 500;
+  color: var(--gray-700);
+  border-left: 4px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.kc-account-sidebar .list-group-item:hover {
+  background-color: var(--gray-100);
+  border-left-color: var(--secondary);
+  transform: translateX(4px);
+}
+
+.kc-account-sidebar .list-group-item.active {
+  background-color: #EFF6FF;
+  border-left-color: var(--secondary);
+  color: var(--secondary);
+  box-shadow: inset 0 0 0 1px var(--secondary);
+}
+
+.kc-account-sidebar .list-group-item i {
+  min-width: 1.5rem;
+}
+
+/* Account Content */
+.kc-account-content {
+  width: 100%;
+}
+
+.kc-account-card {
+  background: white;
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+}
+
+.kc-account-header {
+  padding: 2rem;
+  background: linear-gradient(135deg, var(--primary) 0%, #334155 100%);
+  color: white;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.kc-account-header h1 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.kc-account-header p {
+  margin-bottom: 0;
+  opacity: 0.95;
+}
+
+/* Form Styles */
+.kc-form-account {
+  padding: 2rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-label {
+  font-weight: 600;
+  color: var(--gray-700);
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.form-control {
+  border: 1px solid var(--gray-300);
+  border-radius: var(--border-radius-md);
+  padding: 0.75rem 1rem;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  font-family: inherit;
+  background-color: white;
+}
+
+.form-control:focus {
+  border-color: var(--secondary);
+  box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.1);
+  background-color: #F8FBFF;
+}
+
+.form-control:disabled {
+  background-color: var(--gray-100);
+  color: var(--gray-600);
+}
+
+/* Button Styles */
+.btn {
+  font-weight: 600;
+  border-radius: var(--border-radius-md);
+  padding: 0.75rem 1.5rem;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  font-size: 0.95rem;
+  display: inline-flex;
+  align-items: center;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--secondary) 0%, #06B6D4 100%);
+  color: white;
+  box-shadow: 0 4px 6px -1px rgba(14, 165, 233, 0.3);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #0394BC 0%, #0891B2 100%);
+  box-shadow: 0 10px 15px -3px rgba(14, 165, 233, 0.4);
+  transform: translateY(-2px);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.btn-outline-secondary {
+  border: 2px solid var(--gray-300);
+  color: var(--gray-700);
+}
+
+.btn-outline-secondary:hover {
+  border-color: var(--secondary);
+  color: var(--secondary);
+  background-color: #EFF6FF;
+}
+
+.btn-link {
+  color: var(--secondary);
+  text-decoration: none;
+  padding: 0;
+}
+
+.btn-link:hover {
+  color: #0394BC;
+}
+
+/* Alerts */
+.alert {
+  border: none;
+  border-radius: var(--border-radius-md);
+  padding: 1rem 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.alert-info {
+  background-color: #EFF6FF;
+  color: #1E40AF;
+}
+
+.alert-success {
+  background-color: #ECFDF5;
+  color: #065F46;
+}
+
+.alert-warning {
+  background-color: #FFFBEB;
+  color: #92400E;
+}
+
+.alert-danger {
+  background-color: #FEF2F2;
+  color: #991B1B;
+}
+
+/* Dropdown Styles */
+.dropdown-menu {
+  border: none;
+  box-shadow: var(--shadow-lg);
+  border-radius: var(--border-radius-lg);
+}
+
+.dropdown-item {
+  padding: 0.75rem 1rem;
+  font-weight: 500;
+  color: var(--gray-700);
+  transition: all 0.2s ease;
+}
+
+.dropdown-item:hover {
+  background-color: var(--gray-100);
+  color: var(--secondary);
+}
+
+.dropdown-item.text-danger {
+  color: var(--danger);
+}
+
+.dropdown-item.text-danger:hover {
+  background-color: #FEF2F2;
+  color: #991B1B;
+}
+
+/* Footer */
+.kc-account-footer {
+  background-color: var(--gray-100);
+  border-top: 1px solid var(--gray-300);
+  margin-top: auto;
+}
+
+.kc-account-footer p {
+  font-size: 0.85rem;
+}
+
+/* Table Styles (for sessions, etc.) */
+.table {
+  margin-bottom: 0;
+}
+
+.table thead th {
+  background-color: var(--gray-100);
+  border-color: var(--gray-300);
+  color: var(--gray-700);
+  font-weight: 600;
+}
+
+.table tbody tr {
+  border-color: var(--gray-200);
+}
+
+.table tbody tr:hover {
+  background-color: var(--gray-50);
+}
+
+/* Utility Classes */
+.text-muted {
+  color: var(--gray-500);
+}
+
+.text-danger {
+  color: var(--danger);
+}
+
+.fw-bold {
+  font-weight: 700;
+}
+
+.ms-2 {
+  margin-left: 0.5rem;
+}
+
+.mb-0 {
+  margin-bottom: 0;
+}
+
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+
+.mb-3 {
+  margin-bottom: 1rem;
+}
+
+.mb-4 {
+  margin-bottom: 1.5rem;
+}
+
+.mb-5 {
+  margin-bottom: 3rem;
+}
+
+.mt-5 {
+  margin-top: 3rem;
+}
+
+.py-4 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.py-5 {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .kc-account-sidebar {
+    position: static;
+    margin-bottom: 2rem;
+  }
+
+  .kc-account-sidebar .list-group {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .kc-account-sidebar .list-group-item {
+    flex: 1;
+    border-left: none;
+    border-bottom: 4px solid transparent;
+  }
+
+  .kc-account-sidebar .list-group-item:hover,
+  .kc-account-sidebar .list-group-item.active {
+    border-left: none;
+    border-bottom-color: var(--secondary);
+  }
+}
+
+@media (max-width: 576px) {
+  .kc-account-header {
+    padding: 1.5rem;
+  }
+
+  .kc-account-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .kc-form-account {
+    padding: 1.5rem;
+  }
+
+  .btn {
+    padding: 0.65rem 1.25rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: var(--dark);
+    color: var(--light);
+  }
+
+  .kc-account-card {
+    background: var(--gray-900);
+  }
+
+  .kc-account-sidebar .list-group-item {
+    background-color: var(--gray-800);
+    color: var(--gray-200);
+  }
+
+  .kc-account-sidebar .list-group-item:hover {
+    background-color: var(--gray-700);
+  }
+
+  .form-control {
+    background-color: var(--gray-800);
+    border-color: var(--gray-700);
+    color: var(--light);
+  }
+
+  .form-control:focus {
+    background-color: var(--gray-800);
+    border-color: var(--secondary);
+  }
+
+  .form-control:disabled {
+    background-color: var(--gray-700);
+    color: var(--gray-400);
+  }
+
+  .form-label {
+    color: var(--gray-200);
+  }
+
+  small {
+    color: var(--gray-400);
+  }
+}
