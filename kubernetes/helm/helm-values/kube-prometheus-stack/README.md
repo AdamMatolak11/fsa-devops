@@ -56,3 +56,19 @@ Prometheus check:
 ```promql
 up{service="fsa-be"}
 ```
+
+Grafana Prometheus datasource:
+
+Datasource je provisioned cez Helm chart, preto sa neda menit v Grafana UI. URL je nastavena v `override.yaml`:
+
+```text
+http://kube-prometheus-stack-prometheus.monitoring.svc:9090
+```
+
+Po zmene `override.yaml` aplikuj:
+
+```powershell
+helm upgrade --install kube-prometheus-stack prometheus-community/kube-prometheus-stack `
+  -n monitoring `
+  -f override.yaml
+```

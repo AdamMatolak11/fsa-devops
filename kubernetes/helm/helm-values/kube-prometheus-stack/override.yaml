@@ -7,3 +7,10 @@ prometheus:
 
 grafana:
   defaultDashboardsTimezone: browser
+  sidecar:
+    datasources:
+      defaultDatasourceEnabled: true
+      isDefaultDatasource: true
+      name: Prometheus
+      uid: prometheus
+      url: http://kube-prometheus-stack-prometheus.monitoring.svc:9090
