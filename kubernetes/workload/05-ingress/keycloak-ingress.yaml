@@ -13,10 +13,10 @@ spec:
   ingressClassName: nginx
   tls:
   - hosts:
-      - keycloak.fullstackacademy.sk
+      - 20-234-19-239.sslip.io
     secretName: keycloak-tls-cert
   rules:
-    - host: keycloak.fullstackacademy.sk
+    - host: 20-234-19-239.sslip.io
       http:
         paths:
           - path: /

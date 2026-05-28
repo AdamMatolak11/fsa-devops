@@ -11,10 +11,10 @@ spec:
   ingressClassName: nginx
   tls:
   - hosts:
-      - prometheus.fullstackacademy.sk
+      - prometheus.20-234-19-239.sslip.io
     secretName: prometheus-tls-cert
   rules:
-    - host: prometheus.fullstackacademy.sk
+    - host: prometheus.20-234-19-239.sslip.io
       http:
         paths:
           - path: /

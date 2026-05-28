@@ -11,10 +11,10 @@ spec:
   ingressClassName: nginx
   tls:
   - hosts:
-      - grafana.fullstackacademy.sk
+      - grafana.20-234-19-239.sslip.io
     secretName: grafana-tls-cert
   rules:
-    - host: grafana.fullstackacademy.sk
+    - host: grafana.20-234-19-239.sslip.io
       http:
         paths:
           - path: /
